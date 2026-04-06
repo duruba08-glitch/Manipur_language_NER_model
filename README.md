@@ -1,22 +1,30 @@
-# Manipuri Named Entity Recognition (NER)
+Manipuri Named Entity Recognition (NER)
 
-This project focuses on **Named Entity Recognition (NER) for the Manipuri language**. It provides a **dataset and annotations** to identify entities such as **persons (PER), locations (LOC), and organizations (ORG)** in Manipuri text.
+This project focuses on Named Entity Recognition (NER) for the Manipuri language. It provides a custom dataset with annotations to identify entities such as Persons (PER), Locations (LOC), and Organizations (ORG) in Manipuri text.
 
-The dataset uses **BIO tagging** for training NLP models like **BiLSTM**, handling **prefixes, suffixes, surnames**, and multi-token names. Both **Roman and Meitei Mayek scripts** are supported.
+The dataset follows the BIO tagging scheme and is suitable for training NLP models like BiLSTM. It is designed to handle prefixes, suffixes, surnames, and multi-token entities commonly found in Manipuri. Both Roman script and Meitei Mayek script are supported.
 
----
+Features
+1.Custom annotated dataset for Manipuri NER
+2.BIO tagging format for sequence labeling models
+3.Handles multi-token names, prefixes, and suffixes
+4.Supports both Roman and Meitei Mayek scripts
+5.Suitable for training models like BiLSTM
+Example
 
-## Features
-- Annotated Manipuri text for NER tasks
-- BIO tagging format compatible with sequence labeling models
-- Handles multi-token names, prefixes, and suffixes
-- Supports training BiLSTM or similar NLP models
+Sentence:
+Oinam Bishwamitra Singh went to Imphal.
 
----
+BIO Tagging:
 
-## Example
-
-**Sentence:**  
-`Oinam Bishwamitra Singh went to Imphal.`
-
-**BIO Tagging:**  
+Oinam        B-PER
+Bishwamitra  I-PER
+Singh        I-PER
+went         O
+to           O
+Imphal       B-LOC
+.            O
+Dataset Information
+Dataset was collected, cleaned, and annotated manually
+Focused on real-world Manipuri text
+Designed for supervised learning approaches
